@@ -1,4 +1,4 @@
-import React, { VFC, useState } from "react";
+import React, { VFC } from "react";
 import {
   NumberInputField,
   NumberDecrementStepper,
@@ -9,14 +9,14 @@ import {
 
 type Props = {
   calc: () => void;
-  setProb: (p: number) => void;
+  setStone: (p: number) => void;
 };
 
-const ChakraNumberInput: VFC<Props> = ({ calc, setProb }) => {
+const OnceStoneInput: VFC<Props> = ({ calc, setStone }) => {
   return (
     <NumberInput
       onChange={(value) => {
-        setProb(Number(value));
+        setStone(Number(value));
         calc();
       }}
       max={100}
@@ -31,4 +31,4 @@ const ChakraNumberInput: VFC<Props> = ({ calc, setProb }) => {
   );
 };
 
-export default ChakraNumberInput;
+export default OnceStoneInput;

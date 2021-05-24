@@ -2,19 +2,16 @@ import React, { VFC } from "react";
 import { Button } from "@chakra-ui/react";
 
 type Props = {
-  calc: (prob: number) => void;
-  prob: number;
+  calc: () => void;
 };
 
-const ChakraButton: VFC<Props> = ({ calc, prob }) => {
+const ChakraButton: VFC<Props> = ({ calc }) => {
   return (
     <Button
       w="100%"
       colorScheme="blue"
       onClick={() => {
-        calc(prob);
-        console.log('hoi');
-        
+        calc();
       }}
     >
       引く

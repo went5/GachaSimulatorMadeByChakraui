@@ -9,7 +9,7 @@ import {
   Tfoot,
 } from "@chakra-ui/react";
 
-const ChakraTable: VFC<{ trialsNum: number }> = ({ trialsNum }) => (
+const ChakraTable: VFC<{ trialsNum: number,totalStone:number }> = ({ trialsNum,totalStone }) => (
   <Table variant="striped">
     <TableCaption>Created by Rruryu</TableCaption>
 
@@ -24,7 +24,7 @@ const ChakraTable: VFC<{ trialsNum: number }> = ({ trialsNum }) => (
       </Tr>
       <Tr>
         <Td>合計課金石</Td>
-        <Td isNumeric>0.91444</Td>
+        <Td isNumeric>{totalStone}</Td>
       </Tr>
     </Tbody>
   </Table>

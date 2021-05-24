@@ -1,4 +1,4 @@
-import React, { VFC, useState } from "react";
+import React, { VFC } from "react";
 import {
   NumberInputField,
   NumberDecrementStepper,
@@ -12,7 +12,7 @@ type Props = {
   setProb: (p: number) => void;
 };
 
-const ChakraNumberInput: VFC<Props> = ({ calc, setProb }) => {
+const ProbablityInput: VFC<Props> = ({ calc, setProb }) => {
   return (
     <NumberInput
       onChange={(value) => {
@@ -31,4 +31,4 @@ const ChakraNumberInput: VFC<Props> = ({ calc, setProb }) => {
   );
 };
 
-export default ChakraNumberInput;
+export default ProbablityInput;
