@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Rruryu/gacha-simulator-chakraui/static/css/main.dd394f57.chunk.css",
+    "main.js": "/Rruryu/gacha-simulator-chakraui/static/js/main.7e275886.chunk.js",
+    "main.js.map": "/Rruryu/gacha-simulator-chakraui/static/js/main.7e275886.chunk.js.map",
+    "runtime-main.js": "/Rruryu/gacha-simulator-chakraui/static/js/runtime-main.20c5e82a.js",
+    "runtime-main.js.map": "/Rruryu/gacha-simulator-chakraui/static/js/runtime-main.20c5e82a.js.map",
+    "static/js/2.800e3e53.chunk.js": "/Rruryu/gacha-simulator-chakraui/static/js/2.800e3e53.chunk.js",
+    "static/js/2.800e3e53.chunk.js.map": "/Rruryu/gacha-simulator-chakraui/static/js/2.800e3e53.chunk.js.map",
+    "static/js/3.7cc65978.chunk.js": "/Rruryu/gacha-simulator-chakraui/static/js/3.7cc65978.chunk.js",
+    "static/js/3.7cc65978.chunk.js.map": "/Rruryu/gacha-simulator-chakraui/static/js/3.7cc65978.chunk.js.map",
+    "index.html": "/Rruryu/gacha-simulator-chakraui/index.html",
+    "static/css/main.dd394f57.chunk.css.map": "/Rruryu/gacha-simulator-chakraui/static/css/main.dd394f57.chunk.css.map",
+    "static/js/2.800e3e53.chunk.js.LICENSE.txt": "/Rruryu/gacha-simulator-chakraui/static/js/2.800e3e53.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20c5e82a.js",
+    "static/js/2.800e3e53.chunk.js",
+    "static/css/main.dd394f57.chunk.css",
+    "static/js/main.7e275886.chunk.js"
+  ]
+}
