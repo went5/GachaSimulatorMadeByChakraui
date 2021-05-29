@@ -4,7 +4,7 @@ import ChakraTable from "../presentational/table/ChakraTable";
 import { Box, Flex, Center, Text } from "@chakra-ui/react";
 import ChakraButton from "../presentational/button/ChakraButton";
 import ProbablityInput from "../presentational/numberinput/ProbabilityInput";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { inputState } from "../atoms/states";
 import ChakraNumberInput from "../presentational/numberinput/ChakraNumberInput";
 import SparkNumberInput from "../presentational/numberinput/SparkNumberInput";
