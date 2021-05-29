@@ -5,7 +5,7 @@ import { Box, Flex, Center, Text } from "@chakra-ui/react";
 import ChakraButton from "../presentational/button/ChakraButton";
 import ProbablityInput from "../presentational/numberinput/ProbabilityInput";
 import { useRecoilState } from "recoil";
-import { inputState } from "../atoms/states";
+import { inputState,pointState } from "../atoms/states";
 import ChakraNumberInput from "../presentational/numberinput/ChakraNumberInput";
 import SparkNumberInput from "../presentational/numberinput/SparkNumberInput";
 
@@ -14,7 +14,7 @@ const CalcGacha = () => {
   const [onceStone, setOnceStone] = useRecoilState(inputState("onceStone"));
   const [onceMoney, setOnceMoney] = useRecoilState(inputState("onceMoney"));
   const [spark, setSpark] = useRecoilState(inputState("spark"));
-  const [points, setPoints] = useRecoilState(inputState("points"));
+  const [points, setPoints] = useRecoilState(pointState);
   const [totalGatchas, totalStone, totalMoney, calc] = useGacha(
     prob,
     onceStone,

@@ -12,7 +12,6 @@ const useGacha = (
   const [totalStone, setTotalStone] = useState(0);
   const [totalMoney, setTotalMoney] = useState(0);
 
-  // 最新の値が取れていない
   const calc = () => {
     var totalNum = 0;
     var getPoints = 0;
