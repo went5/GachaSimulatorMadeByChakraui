@@ -25,25 +25,25 @@ const CalcGacha = () => {
         totalStone={totalStone}
         totalMoney={totalMoney}
       />
-      <Flex mb={3}>
+      <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>確率(%)</Text>
         </Center>
         <ProbablityInput setProb={setProb} />
       </Flex>
-      <Flex mb={3}>
+      <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>1回分の課金石</Text>
         </Center>
         <ChakraNumberInput setValue={setOnceStone} />
       </Flex>
-      <Flex mb={3}>
+      <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>1回分の値段</Text>
         </Center>
         <ChakraNumberInput setValue={setOnceMoney} />
       </Flex>
-      <Box mb={3} w="100%">
+      <Box mt={10} w="100%">
         <ChakraButton calc={calc} />
       </Box>
     </Box>

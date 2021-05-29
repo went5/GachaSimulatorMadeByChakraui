@@ -14,6 +14,7 @@ const ChakraNumberInput: VFC<{setValue:(p:number)=>void}> = ({ setValue }) => {
       onChange={(value) => {
         setValue(Number(value));
       }}
+      defaultValue={0}
     >
       <NumberInputField />
       <NumberInputStepper>

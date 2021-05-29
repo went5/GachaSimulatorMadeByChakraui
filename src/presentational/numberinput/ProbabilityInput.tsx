@@ -7,8 +7,9 @@ import {
   NumberInput,
 } from "@chakra-ui/react";
 
-
-const ProbablityInput: VFC<{setProb:(p:number)=>void}> = ({ setProb }) => {
+const ProbablityInput: VFC<{ setProb: (p: number) => void }> = ({
+  setProb,
+}) => {
   return (
     <NumberInput
       onChange={(value) => {
@@ -16,6 +17,7 @@ const ProbablityInput: VFC<{setProb:(p:number)=>void}> = ({ setProb }) => {
       }}
       max={100}
       min={0}
+      defaultValue={0}
     >
       <NumberInputField />
       <NumberInputStepper>
