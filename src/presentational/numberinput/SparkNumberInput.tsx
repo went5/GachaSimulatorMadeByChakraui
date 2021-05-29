@@ -8,13 +8,12 @@ import {
 } from "@chakra-ui/react";
 
 
-const ChakraNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setValue,dv }) => {
+const SparkNumberInput: VFC<{setValue:(p:number)=>void}> = ({ setValue }) => {
   return (
     <NumberInput
       onChange={(value) => {
         setValue(Number(value));
       }}
-      defaultValue={dv?dv:0}
       min={0}
 
     >
@@ -27,4 +26,4 @@ const ChakraNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setVal
   );
 };
 
-export default ChakraNumberInput;
+export default SparkNumberInput;

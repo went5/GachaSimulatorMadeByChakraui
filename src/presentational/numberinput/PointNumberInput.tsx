@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 
-const ChakraNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setValue,dv }) => {
+const PointNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setValue,dv }) => {
   return (
     <NumberInput
       onChange={(value) => {
@@ -16,7 +16,6 @@ const ChakraNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setVal
       }}
       defaultValue={dv?dv:0}
       min={0}
-
     >
       <NumberInputField />
       <NumberInputStepper>
@@ -27,4 +26,4 @@ const ChakraNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setVal
   );
 };
 
-export default ChakraNumberInput;
+export default PointNumberInput;

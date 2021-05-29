@@ -4,18 +4,23 @@ import ChakraTable from "../presentational/table/ChakraTable";
 import { Box, Flex, Center, Text } from "@chakra-ui/react";
 import ChakraButton from "../presentational/button/ChakraButton";
 import ProbablityInput from "../presentational/numberinput/ProbabilityInput";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { inputState } from "../atoms/states";
 import ChakraNumberInput from "../presentational/numberinput/ChakraNumberInput";
+import SparkNumberInput from "../presentational/numberinput/SparkNumberInput";
 
 const CalcGacha = () => {
   const [prob, setProb] = useRecoilState(inputState("probability"));
   const [onceStone, setOnceStone] = useRecoilState(inputState("onceStone"));
   const [onceMoney, setOnceMoney] = useRecoilState(inputState("onceMoney"));
+  const [spark, setSpark] = useRecoilState(inputState("spark"));
+  const [points, setPoints] = useRecoilState(inputState("points"));
   const [totalGatchas, totalStone, totalMoney, calc] = useGacha(
     prob,
     onceStone,
-    onceMoney
+    onceMoney,
+    spark,
+    points
   );
 
   return (
@@ -42,6 +47,18 @@ const CalcGacha = () => {
           <Text color={"white"}>1回分の値段</Text>
         </Center>
         <ChakraNumberInput setValue={setOnceMoney} />
+      </Flex>
+      <Flex mt={2.5}>
+        <Center w="150px" bg="red.500">
+          <Text color={"white"}>天井までの回数</Text>
+        </Center>
+        <SparkNumberInput setValue={setSpark} />
+      </Flex>
+      <Flex mt={2.5}>
+        <Center w="150px" bg="red.500">
+          <Text color={"white"}>獲得個数</Text>
+        </Center>
+        <ChakraNumberInput setValue={setPoints} dv={1}/>
       </Flex>
       <Box mt={10} w="100%">
         <ChakraButton calc={calc} />

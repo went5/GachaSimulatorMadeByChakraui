@@ -3,7 +3,9 @@ import { useState } from "react";
 const useGacha = (
   prob: number,
   onceStone: number,
-  onceMoney: number
+  onceMoney: number,
+  spark: number,
+  points: number
 ): [number, number, number, () => void] => {
   // 確率を受け取り、ガチャ回数を返す
   const [totalGachas, setTotalGachas] = useState(0);
@@ -12,21 +14,33 @@ const useGacha = (
 
   // 最新の値が取れていない
   const calc = () => {
-    var num = 1;
+    var totalNum = 0;
+    var getPoints = 0;
     setTotalGachas(() => {
-      var rand = Math.random() * 100;
       if (prob <= 0) {
         return 0;
       }
-      while (rand > prob) {
-        num++;
-        rand = Math.random() * 100;
-      }
+      while (getPoints < points) {
+        var rand = Math.random() * 100;
 
-      return num;
+        if (rand <= prob) {
+          totalNum++;
+        }
+        var num = 0;
+        while (rand > prob) {
+          if (num >= spark && spark !== 0) {
+            break;
+          }
+          num++;
+          rand = Math.random() * 100;
+        }
+        totalNum += num;
+        getPoints++;
+      }
+      return totalNum;
     });
-    setTotalStone(() => num * onceStone);
-    setTotalMoney(() => num * onceMoney);
+    setTotalStone(() => totalNum * onceStone);
+    setTotalMoney(() => totalNum * onceMoney);
   };
   // 最新の値が取れていない
 
