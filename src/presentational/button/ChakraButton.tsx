@@ -7,13 +7,7 @@ type Props = {
 
 const ChakraButton: VFC<Props> = ({ calc }) => {
   return (
-    <Button
-      w="100%"
-      colorScheme="blue"
-      onClick={() => {
-        calc();
-      }}
-    >
+    <Button w="100%" colorScheme="blue" onClick={calc}>
       引く
     </Button>
   );

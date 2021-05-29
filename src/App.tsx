@@ -1,27 +1,18 @@
-import React, { SyntheticEvent, useState } from "react";
+import React from "react";
 import "./App.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  InputGroup,
-  InputLeftAddon,
-  Input,
-  Text,
-  Center,
-} from "@chakra-ui/react";
 import ChakraHeader from "./presentational/header/ChakraHeader";
 import CalcGacha from "./containers/Gacha";
+import { RecoilRoot } from "recoil";
 
 const App = () => {
   return (
-    <ChakraProvider>
-      <ChakraHeader />
-      <CalcGacha />
-
-    </ChakraProvider>
+    <RecoilRoot>
+      <ChakraProvider>
+        <ChakraHeader />
+        <CalcGacha />
+      </ChakraProvider>
+    </RecoilRoot>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { VFC, useState } from "react";
+import React, { VFC } from "react";
 import {
   NumberInputField,
   NumberDecrementStepper,
@@ -7,20 +7,13 @@ import {
   NumberInput,
 } from "@chakra-ui/react";
 
-type Props = {
-  calc: () => void;
-  setProb: (p: number) => void;
-};
 
-const ChakraNumberInput: VFC<Props> = ({ calc, setProb }) => {
+const ChakraNumberInput: VFC<{setValue:(p:number)=>void}> = ({ setValue }) => {
   return (
     <NumberInput
       onChange={(value) => {
-        setProb(Number(value));
-        calc();
+        setValue(Number(value));
       }}
-      max={100}
-      min={0}
     >
       <NumberInputField />
       <NumberInputStepper>

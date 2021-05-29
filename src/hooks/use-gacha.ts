@@ -1,27 +1,19 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 
-const useGacha = (): [
-  number,
-  () => void,
-  number,
-  () => void,
-  (prop: number) => void,
-  (onceStone: number) => void
-] => {
-  //probとonceStoneを使えれば・・・
+const useGacha = (
+  prob: number,
+  onceStone: number,
+  onceMoney: number
+): [number, number, number, () => void] => {
   // 確率を受け取り、ガチャ回数を返す
-  const [gachasNum, setGachas] = useState(0);
+  const [totalGachas, setTotalGachas] = useState(0);
   const [totalStone, setTotalStone] = useState(0);
-  const [prob, setProb] = useState(0);
-  const [onceStone, setOnceStone] = useState(0);
-
-  const SetProb = (prob: number) => setProb(() => prob);
-  const SetOnceStone = (onceStone: number) => setOnceStone(() => onceStone);
+  const [totalMoney, setTotalMoney] = useState(0);
 
   // 最新の値が取れていない
   const calc = () => {
-    setGachas(() => {
-      var num = 1;
+    var num = 1;
+    setTotalGachas(() => {
       var rand = Math.random() * 100;
       if (prob <= 0) {
         return 0;
@@ -33,11 +25,13 @@ const useGacha = (): [
 
       return num;
     });
+    setTotalStone(() => num * onceStone);
+    setTotalMoney(() => num * onceMoney);
   };
   // 最新の値が取れていない
 
-  const calcTotalStone = () => setTotalStone(() => gachasNum * onceStone);
-  return [gachasNum, calc, totalStone, calcTotalStone, SetProb, SetOnceStone];
+  //const calcTotalStone = () => setTotalStone(() => totalGachas * onceStone);
+  return [totalGachas, totalStone, totalMoney, calc];
 };
 
 export default useGacha;

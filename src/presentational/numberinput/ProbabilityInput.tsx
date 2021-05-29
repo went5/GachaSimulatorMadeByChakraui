@@ -7,17 +7,12 @@ import {
   NumberInput,
 } from "@chakra-ui/react";
 
-type Props = {
-  calc: () => void;
-  setProb: (p: number) => void;
-};
 
-const ProbablityInput: VFC<Props> = ({ calc, setProb }) => {
+const ProbablityInput: VFC<{setProb:(p:number)=>void}> = ({ setProb }) => {
   return (
     <NumberInput
       onChange={(value) => {
         setProb(Number(value));
-        calc();
       }}
       max={100}
       min={0}
