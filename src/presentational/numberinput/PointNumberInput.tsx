@@ -6,13 +6,13 @@ import {
 } from "@chakra-ui/react";
 
 
-const PointNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setValue,dv }) => {
+const PointNumberInput: VFC<{setValue:(p:number)=>void}> = ({ setValue }) => {
   return (
     <NumberInput
       onChange={(value) => {
         setValue(Number(value));
       }}
-      defaultValue={dv?dv:0}
+      defaultValue={1}
       min={0}
     >
       <NumberInputField />
