@@ -8,6 +8,7 @@ import { useRecoilState } from "recoil";
 import { inputState,pointState } from "../atoms/states";
 import ChakraNumberInput from "../presentational/numberinput/ChakraNumberInput";
 import SparkNumberInput from "../presentational/numberinput/SparkNumberInput";
+import PointNumberInput from '../presentational/numberinput/PointNumberInput';
 
 const CalcGacha = () => {
   const [prob, setProb] = useRecoilState(inputState("probability"));
@@ -58,7 +59,7 @@ const CalcGacha = () => {
         <Center w="150px" bg="red.500">
           <Text color={"white"}>獲得個数</Text>
         </Center>
-        <ChakraNumberInput setValue={setPoints} dv={1}/>
+        <PointNumberInput setValue={setPoints} />
       </Flex>
       <Box mt={10} w="100%">
         <ChakraButton calc={calc} />

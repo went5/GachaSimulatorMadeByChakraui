@@ -15,7 +15,6 @@ const ProbablityInput: VFC<{ setProb: (p: number) => void }> = ({
       }}
       max={100}
       min={0}
-      defaultValue={0}
     >
       <NumberInputField />
       <NumberInputStepper>
