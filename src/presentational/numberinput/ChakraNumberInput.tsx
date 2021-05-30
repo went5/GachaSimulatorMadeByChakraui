@@ -1,8 +1,6 @@
 import React, { VFC } from "react";
 import {
   NumberInputField,
-  NumberDecrementStepper,
-  NumberIncrementStepper,
   NumberInputStepper,
   NumberInput,
 } from "@chakra-ui/react";
@@ -20,8 +18,6 @@ const ChakraNumberInput: VFC<{setValue:(p:number)=>void,dv?:number}> = ({ setVal
     >
       <NumberInputField />
       <NumberInputStepper>
-        <NumberIncrementStepper />
-        <NumberDecrementStepper />
       </NumberInputStepper>
     </NumberInput>
   );
