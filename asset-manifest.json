@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/gacha-simulator-chakraui/static/css/main.dd394f57.chunk.css",
-    "main.js": "/gacha-simulator-chakraui/static/js/main.a6662919.chunk.js",
-    "main.js.map": "/gacha-simulator-chakraui/static/js/main.a6662919.chunk.js.map",
+    "main.js": "/gacha-simulator-chakraui/static/js/main.14b8b550.chunk.js",
+    "main.js.map": "/gacha-simulator-chakraui/static/js/main.14b8b550.chunk.js.map",
     "runtime-main.js": "/gacha-simulator-chakraui/static/js/runtime-main.68a703b0.js",
     "runtime-main.js.map": "/gacha-simulator-chakraui/static/js/runtime-main.68a703b0.js.map",
-    "static/js/2.0bd9442e.chunk.js": "/gacha-simulator-chakraui/static/js/2.0bd9442e.chunk.js",
-    "static/js/2.0bd9442e.chunk.js.map": "/gacha-simulator-chakraui/static/js/2.0bd9442e.chunk.js.map",
+    "static/js/2.61338a52.chunk.js": "/gacha-simulator-chakraui/static/js/2.61338a52.chunk.js",
+    "static/js/2.61338a52.chunk.js.map": "/gacha-simulator-chakraui/static/js/2.61338a52.chunk.js.map",
     "static/js/3.7cc65978.chunk.js": "/gacha-simulator-chakraui/static/js/3.7cc65978.chunk.js",
     "static/js/3.7cc65978.chunk.js.map": "/gacha-simulator-chakraui/static/js/3.7cc65978.chunk.js.map",
     "index.html": "/gacha-simulator-chakraui/index.html",
     "static/css/main.dd394f57.chunk.css.map": "/gacha-simulator-chakraui/static/css/main.dd394f57.chunk.css.map",
-    "static/js/2.0bd9442e.chunk.js.LICENSE.txt": "/gacha-simulator-chakraui/static/js/2.0bd9442e.chunk.js.LICENSE.txt"
+    "static/js/2.61338a52.chunk.js.LICENSE.txt": "/gacha-simulator-chakraui/static/js/2.61338a52.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.68a703b0.js",
-    "static/js/2.0bd9442e.chunk.js",
+    "static/js/2.61338a52.chunk.js",
     "static/css/main.dd394f57.chunk.css",
-    "static/js/main.a6662919.chunk.js"
+    "static/js/main.14b8b550.chunk.js"
   ]
 }
