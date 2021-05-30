@@ -21,7 +21,6 @@ const useGacha = (
       }
       while (getPoints < points) {
         var rand = Math.random() * 100;
-
         if (rand <= prob) {
           totalNum++;
         }

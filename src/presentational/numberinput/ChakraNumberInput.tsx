@@ -5,19 +5,23 @@ import {
   NumberInput,
 } from "@chakra-ui/react";
 
-
-const ChakraNumberInput: VFC<{setValue:(p:number)=>void}> = ({ setValue }) => {
+const ChakraNumberInput: VFC<{
+  setValue: (p: number) => void;
+  min?: number;
+  max?: number;
+  dV?: number;
+}> = ({ setValue, min, max,dV }) => {
   return (
     <NumberInput
       onChange={(value) => {
         setValue(Number(value));
       }}
-      min={0}
-
+      max={max ?? max}
+      defaultValue={dV ?? dV}
+      min={min ?? min}
     >
       <NumberInputField />
-      <NumberInputStepper>
-      </NumberInputStepper>
+      <NumberInputStepper></NumberInputStepper>
     </NumberInput>
   );
 };

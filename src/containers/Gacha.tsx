@@ -3,12 +3,9 @@ import useGacha from "../hooks/use-gacha";
 import ChakraTable from "../presentational/table/ChakraTable";
 import { Box, Flex, Center, Text } from "@chakra-ui/react";
 import ChakraButton from "../presentational/button/ChakraButton";
-import ProbablityInput from "../presentational/numberinput/ProbabilityInput";
 import { useRecoilState } from "recoil";
 import { inputState } from "../atoms/states";
 import ChakraNumberInput from "../presentational/numberinput/ChakraNumberInput";
-import SparkNumberInput from "../presentational/numberinput/SparkNumberInput";
-import PointNumberInput from '../presentational/numberinput/PointNumberInput';
 
 const CalcGacha = () => {
   const [prob, setProb] = useRecoilState(inputState("probability"));
@@ -35,31 +32,31 @@ const CalcGacha = () => {
         <Center w="150px" bg="red.500">
           <Text color={"white"}>確率(%)</Text>
         </Center>
-        <ProbablityInput setProb={setProb} />
+        <ChakraNumberInput setValue={setProb} min={0} max={100}/>
       </Flex>
       <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>1回分の課金石</Text>
         </Center>
-        <ChakraNumberInput setValue={setOnceStone} />
+        <ChakraNumberInput setValue={setOnceStone} min={0}/>
       </Flex>
       <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>1回分の値段</Text>
         </Center>
-        <ChakraNumberInput setValue={setOnceMoney} />
+        <ChakraNumberInput setValue={setOnceMoney} min={0}/>
       </Flex>
       <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>天井までの回数</Text>
         </Center>
-        <SparkNumberInput setValue={setSpark} />
+        <ChakraNumberInput setValue={setSpark} min={0} />
       </Flex>
       <Flex mt={2.5}>
         <Center w="150px" bg="red.500">
           <Text color={"white"}>獲得個数</Text>
         </Center>
-        <PointNumberInput setValue={setPoints} />
+        <ChakraNumberInput setValue={setPoints} dV={1}/>
       </Flex>
       <Box mt={10} w="100%">
         <ChakraButton calc={calc} />
