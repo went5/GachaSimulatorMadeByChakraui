@@ -1,2 +1,2 @@
 # Gacha Simulator
-https://eda821.github.io/gacha-simulator-chakraui/
+https://went-bye.github.io/gacha-simulator-chakraui/
