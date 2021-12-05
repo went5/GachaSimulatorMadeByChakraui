@@ -1,2 +1,2 @@
 # Gacha Simulator
-https://went-bye.github.io/gacha-simulator-chakraui/
+https://went5.github.io/gacha-simulator-chakraui/
