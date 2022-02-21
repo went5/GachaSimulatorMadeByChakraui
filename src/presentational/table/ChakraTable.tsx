@@ -7,7 +7,7 @@ const ChakraTable: VFC<{
   totalMoney: number;
 }> = ({ trialsNum, totalStone, totalMoney }) => (
   <Table variant="striped">
-    <TableCaption>Created by Rruryu</TableCaption>
+    <TableCaption>Created by Went5</TableCaption>
 
     <Tbody>
       <Tr>
